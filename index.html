@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Centro de Registro para Estudiantes Vylkroxant</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@750&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="v-body">
+<a href="index.html" class="btn-floating-back" title="Regresar">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<path d="M19 12H5M12 19l-7-7 7-7"/>
+</svg>
+<span>Volver</span>
+</a>
+<div class="main-container">
+<div class="control-panel">
+<h2 class="text-gradient">&reg; Vylkroxant</h2>
+<p style="color: #777; font-size: 0.8rem; text-align: center; padding-top: 0; margin-top: -1rem;">Llena los campos y descarga tu Gafete de Estudiante <br><strong>&reg; Vylkroxant</strong>.</p>            
+<div class="input-group">
+<label>Ingresa tu primer nombre y primer apellido:</label>
+<input type="text" id="inName" placeholder="Ej. Vylkroxant Guatemala" maxlength="25">
+</div>
+<div class="input-group">
+<label>Selecciona el curso a estudiar</label>
+<select id="inCourse">
+<option value="" disabled selected>Seleccionar</option>
+<optgroup label="Microsoft Office LTSC">
+<option value="Microsoft Office LTSC Word">Word (Documentos profesionales)</option>
+<option value="Microsoft Office LTSC Excel">Excel (Análisis y automatización)</option>
+<option value="Microsoft Office LTSC Access">Access (Bases de datos)</option>
+<option value="Microsoft Office LTSC PowerPoint">PowerPoint (Narrativa y diseño)</option>
+<option value="Microsoft Office LTSC Visio">Visio (Diagramación empresarial)</option>
+<option value="Microsoft Office LTSC Project">Project (Planificación y control)</option>
+</optgroup>
+<optgroup label="Idiomas">
+<option value="Inglés Australiano - Microsoft">Inglés Australiano</option>
+</optgroup>
+</select>
+</div>
+<div class="input-group">
+<label>Ingresa tu CDI dado por el Director</label>
+<input type="text" id="inCDI" placeholder="00000000000000000000000000000000000000000000000" maxlength="15">
+</div>
+<div class="input-group">
+<label>Nivel de Acceso</label>
+<select id="inLevel" class="v-custom-select">
+<option value="" disabled selected>Selecciona tu nivel dado por el Director</option>
+<option value="Estudiante Inicial en:" data-theme="standard">Estudiante Inicial (Etapa Temprana)</option>
+<option value="Estudiante en Formación en:" data-theme="business">Estudiante en Formación (Nivel Global)</option>
+<option value="Estudiante Distinguido en:" data-theme="premium">Estudiante Distinguido (Nivel Avanzado)</option>
+</select>
+</div>
+<div class="input-group">
+<label>Fotografía Oficial</label>
+<div class="file-wrapper">
+<input type="file" id="inFile" accept="image/*">
+<div class="file-button">Seleccionar Imagen</div>
+</div>
+</div>
+<button id="btnDown" class="btn-main" disabled>Descargar Gafete</button>
+</div>
+<div class="preview-area">
+<div class="v-card" id="vCardToCapture">
+<div class="v-card__glow"></div>         
+<div class="v-card__header">
+<div class="v-card__logo-box">
+<div class="v-card__logo-icon">V</div>
+<div class="v-card__brand-text">
+<div class="v-card__brand">VYLKRO<span>XANT</span></div>
+<div class="v-card__tagline">Estudiante Certificado</div>
+</div>
+</div>
+<div class="v-card__chip"></div>
+</div>
+<div class="v-card__body">
+<div class="v-card__photo-container">
+<div id="vCardPhoto" class="v-photo-wrapper">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width:40%; opacity:0.2;"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+</div>
+</div>
+<div class="v-card__info">
+<div class="v-label">Estudiante</div>
+<h3 id="vName">Nombre del Estudiante</h3>
+<div class="v-label" style="margin-top: 15px;">Código De Identificación -CDI-</div>
+<p id="vCDI">#000000000000000</p>
+</div>
+</div>
+<div class="v-card__footer">
+<div class="v-status">
+<span class="dot"></span>
+<span id="vLevel">Estudiante en: </span>
+</div>
+<div id="vCourse" class="v-course-tag">Especialidad Vylkroxant</div>
+</div>
+</div>
+</div>
+<footer class="v-footer">
+    <div class="v-footer__content">
+        <p class="v-footer__disclaimer">
+            <strong>AVISO DE AUTENTICIDAD</strong>
+        </p>
+        
+        <div class="v-footer__instructions">
+            <p><strong>REQUISITOS PARA VALIDACIÓN OFICIAL</strong></p>
+            <ul>
+                <li><strong>Dimensiones:</strong> Imprimir en tamaño estándar de carnet (8.5 cm x 5.4 cm).</li>
+                <li><strong>Soporte:</strong> Utilizar papel de alto gramaje (Papel Bristol, Mate de 250g o Papel Fotográfico).</li>
+                <li><strong>Certificación:</strong> El documento solo será válido tras recibir la <strong>firma autógrafa y sello húmedo</strong> de la Dirección, seguido del proceso de plastificado (emplasticado).</li>
+            </ul>
+        </div>
+
+        <p class="v-footer__copyright">&copy; 2021-2026 Vylkroxant - Todos los derechos reservados.</p>
+    </div>
+</footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
